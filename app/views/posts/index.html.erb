@@ -1,0 +1,12 @@
+<% if (@posts.blank?) %>
+	<h2>Sorry brah, no posts seem to be here.</h2>
+<% else %>
+	<% @posts.each do |post| %>
+		<p>
+			<h3><%= post.title %></h3></br>
+			<%= post.author %></br>
+			<%= post.date %></br>
+			<p><%= post.content %></p>
+		</p>
+	<% end %>
+<% end %>
