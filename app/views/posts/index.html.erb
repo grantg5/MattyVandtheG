@@ -5,7 +5,7 @@
 		<p>
 			<h3><%= post.title %></h3></br>
 			<%= post.author %></br>
-			<%= post.date %></br>
+			<%= post.updated_at.strftime("%m/%d/%Y") %></br>
 			<p><%= post.content %></p>
 		</p>
 	<% end %>

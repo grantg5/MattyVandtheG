@@ -1,1 +1,9 @@
-<p>Stuff</p>
+<p>
+	<h4 style="display: inline;">Title: </h4><%= @post.title %></br>
+	<h4 style="display: inline;">Author: </h4><%= @post.author %></br>
+	<h4 style="display: inline;">Date: </h4><%= @post.updated_at.strftime("%m/%d/%Y") %>
+</p>
+
+<p>
+	<%= @post.content %>
+</p>

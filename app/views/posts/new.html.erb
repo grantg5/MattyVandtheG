@@ -4,17 +4,13 @@
 		<%= f.text_field :title %>
 	</p>
 	
-	<!--As user functionality is added, author and title fields will be replaced with checking who's logged in.
+	<!--As user functionality is added, the author field will be replaced with checking who's logged in.
 		However it's here currently for testing purposes.-->
 	<p>
 		<%= f.label :author %></br>
 		<%= f.text_field :author %>
 	</p>
-	
-	<p>
-		<%= select_date Date::today, :prefix => 'date' %>
-	</p>
-	
+		
 	<p>
 		<%= f.label :content %></br>
 		<%= f.text_area :content %>

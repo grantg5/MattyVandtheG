@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />    
+		<title></title> <!--Replace with something to take the title of the current post, or the current page (Home, Authors, etc.).-->
+		<link href="bootstrap.css" type="text/css" rel="stylesheet" />
+		<link href="a_dumb_comedy_site.css" type="text/css" rel="stylesheet" />
+		<style>
+			#title {
+				margin-left: auto;
+				margin-right: auto;
+				color: white;
+				margin-top: 10px;
+				display: inline;
+				text-decoration: none;
+				font-family: "Times", serif;
+				font-style: oblique;
+			}
+
+			#tagline {
+				margin-left: 270px;
+				color: white;
+				margin-top: 10px;
+				display: inline;
+				font-family: "Comic Sans MS", cursive, sans-serif;
+				margin-bottom: 5px;
+			}
+
+			#first_link {
+				margin-left: 30px;
+				margin-top: 10px;
+				display: inline;
+				color: white;
+				text-align: right;
+				margin-bottom: 5px;
+			}
+
+			#second_link {
+				margin-left: 10px;
+				margin-top: 10px;
+				display: inline;
+				color: white;
+				text-align: right;
+				margin-bottom: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<form id="form1" runat="server">
+			<div id="site">
+				<div class="navbar">
+					<div class="navbar-inner" style="background-color:#00a1f1">
+						<div class="row">
+							<h3><a id="title">A Dumb Comedy Site</a></h3> <!--Fix link here to point to homepage and below to point to pages fetching by author-->
+							<h5 id="tagline">Now with more Comic Sans!</h5>
+							<a id="first_link">Matt's dumb blog.</a> <!--Change these to point to page listing all the authors-->
+							<a id="second_link">Grant's dumb blog.</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<%= yield %>
+	</body>
+</html>

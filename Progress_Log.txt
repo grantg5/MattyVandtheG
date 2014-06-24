@@ -1,0 +1,13 @@
+Matty V and the G Progress Log
+
+TODO:
+	Write the other methods in the authors controller.
+	Write the html pages for the author stuff.
+	
+	Create login/user functionality, restrict access to anything that falls into admin tools to logged in authors only.
+	Create admin (aka author) part of side.
+		-Allow creation of new post, creation of new author.
+		-Allow deletion of posts and authors.
+		-Change post creation page to read the current author signed in.
+
+6/24/14 - Author routing working.
