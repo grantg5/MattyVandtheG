@@ -2,7 +2,13 @@
 
 class AuthorsController < ApplicationController
   def index
-	#Lists all posts created by this author.
+	#Lists all of the authors to choose from.
+	@authors = Author.all
+  end
+  
+  def show
+    #Lists all of the posts by author, given the author's id as a param.
+	@posts = Post.where(:author => params[:author])
   end
   
   def new
