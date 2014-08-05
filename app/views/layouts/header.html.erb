@@ -52,10 +52,9 @@
 				<div class="navbar">
 					<div class="navbar-inner" style="background-color:#00a1f1">
 						<div class="row">
-							<h3><a id="title">A Dumb Comedy Site</a></h3> <!--Fix link here to point to homepage and below to point to pages fetching by author-->
+							<h3 id="title"><%= link_to('Matty V and the G', '/posts/') %></h3>
 							<h5 id="tagline">Now with more Comic Sans!</h5>
-							<a id="first_link">Matt's dumb blog.</a> <!--Change these to point to page listing all the authors-->
-							<a id="second_link">Grant's dumb blog.</a>
+							<span id="first_link"><%= link_to('Authors', '/authors/') %></span>
 						</div>
 					</div>
 				</div>
