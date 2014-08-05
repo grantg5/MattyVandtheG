@@ -17,7 +17,7 @@ class AuthorsController < ApplicationController
   
   def create
 	#Creates a new author in the database.
-	before_action :require_login
+	#before_action :require_login //Uncomment on addition of login functionality.
 	
 	@author = Author.new(author_params)
 	@author.save
@@ -27,13 +27,12 @@ class AuthorsController < ApplicationController
   private
     def author_params
 	  #Checks the information entered to ensure it's what's required for a new author.
-	  
-	  #Enter params required here to prevent injection/cross site.
+	  params.require(:author).permit(:name, :password, :password_confirmation, :email, :security_question, :security_answer)
 	end
 	
 	def require_login
 	  #Ensures that an author is currently logged in.
 	  
-	  #Check to make sure an account is currently logged in.
+	  #TODO Check to make sure an account is currently logged in.
 	end
 end

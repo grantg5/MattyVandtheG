@@ -1,0 +1,35 @@
+<%= form_for :author, url: authors_path do |form| %>
+	<p>
+		<%= form.label :name %>
+		<%= form.text_field :name %>
+	</p>
+	
+	<p>
+		<%= form.label :password %>
+		<%= form.password_field :password %>
+	</p>
+	
+	<p>
+		<%= form.label :password_confirmation %>
+		<%= form.password_field :password_confirmation %>
+	</p>
+	
+	<p>
+		<%= form.label :email %>
+		<%= form.text_field :email %>
+	</p>
+	
+	<p>
+		<%= form.label :security_question %>
+		<%= form.text_field :security_question %>
+	</p>
+	
+	<p>
+		<%= form.label :security_answer %>
+		<%= form.text_field :security_answer %>
+	</p>
+	
+	<p>
+		<%= form.submit %>
+	</p>
+<% end %>
