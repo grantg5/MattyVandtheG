@@ -17,11 +17,19 @@ class AuthorsController < ApplicationController
   
   def create
 	#Creates a new author in the database.
-	#before_action :require_login //Uncomment on addition of login functionality.
+	if require_login
+	  @author = Author.new(author_params)
 	
-	@author = Author.new(author_params)
-	@author.save
-	redirect_to @author
+	  if (@author.save)
+	    session[:author] = @author.name
+	    redirect_to @author
+	  else
+	    redirect_to root_path
+	  end
+	  
+	#else
+	  #redirect_to root_path
+    #end
   end
   
   private
@@ -32,7 +40,10 @@ class AuthorsController < ApplicationController
 	
 	def require_login
 	  #Ensures that an author is currently logged in.
-	  
-	  #TODO Check to make sure an account is currently logged in.
+	  if session[:author]
+	    return true
+	  else
+	    return false
+	  end
 	end
 end

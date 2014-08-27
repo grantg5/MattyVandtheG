@@ -1,14 +1,16 @@
 Matty V and the G Progress Log
 
 NEXT:
-	Create Linkage to stuff all over the site.
-
+	
+	
 TODO:
 	Write the other methods in the authors controller. (finished)
 	Write the html pages for the author stuff. (finished)
-	Create easy linkage to everything in the site.
+	Create easy linkage to everything in the site. (finished)
 	
-	Create login/user functionality, restrict access to anything that falls into admin tools to logged in authors only.
+	Add encryption to passwords, security answers. (finished)
+	Create login. (finished)
+	Create login/user functionality, restrict access to anything that falls into admin tools to logged in authors only. (Finished)
 	Create admin (aka author) part of site.
 		-Allow creation of new post, creation of new author.
 		-Allow deletion of posts and authors.

@@ -12,9 +12,13 @@ class PostsController < ApplicationController
   
   def create
     #Saves a new post to the database.
-    @post = Post.new(post_params)
-	@post.save
-	redirect_to @post
+	if require_login
+      @post = Post.new(post_params)
+	  @post.save
+	  redirect_to @post
+	else
+	  redirect_to root_path
+	end
   end
   
   def show
@@ -26,5 +30,14 @@ class PostsController < ApplicationController
 	def post_params
 	  #Checks new post to ensure it fills all criteria before saving it to the database.
 	  params.require(:post).permit(:title, :author, :date, :content)
+	end
+	
+	def require_login
+	  #Ensures that an author is currently logged in.
+	  if session[:author]
+	    return true
+	  else
+	    return false
+	  end
 	end
 end
