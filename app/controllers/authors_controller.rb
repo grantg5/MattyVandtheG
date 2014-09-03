@@ -27,9 +27,9 @@ class AuthorsController < ApplicationController
 	    redirect_to root_path
 	  end
 	  
-	#else
+	else
 	  #redirect_to root_path
-    #end
+    end
   end
   
   private
